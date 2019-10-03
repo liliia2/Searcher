@@ -1,0 +1,32 @@
+<div class="search-page">
+  <form (ngSubmit)="searchText(f.value.text, f.value.system)" #f="ngForm">
+    <h1>Поиск</h1>
+    <div class="content">
+      <input 
+        type="text" 
+        placeholder="Введите текст для поиска" 
+        id="searchText" 
+        name="text"
+        ngModel
+        [ngClass]="(errorMessage === 'Введите текст для поиска' || errorMessage === 'Введите корректный запрос') ? 'red' : 'simple' "
+        (click)="deleteErrorMessage()"
+      >
+      <select 
+        id="searchSystem" 
+        (click)="deleteErrorMessage()" 
+        [(ngModel)]="system" 
+        [ngClass]="errorMessage === 'Выберите систему для поиска' ? 'red' : 'simple' "
+        name="system"
+      >
+        <option selected>Укажите поисковую систему</option>
+        <option value="google">Google</option>
+        <option value="bing">Bing</option>
+        <option value="ask">Ask</option>
+      </select>
+      <button type="submit">Искать</button>
+    </div>
+    <span class="error" id="errorText">
+      {{ errorMessage }}
+    </span>
+  </form>
+</div>

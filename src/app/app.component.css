@@ -1,0 +1,114 @@
+.search-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 20% 0;
+    padding: 0;
+    color: #363636;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.search-page input {
+    height: 31px;
+    width: 400px;
+    font-size: 14px;
+    padding: 0 12px;
+    margin-right: 16px;
+    border-color: #b1b1b12b;
+    border-radius: 4px;
+}
+
+.search-page select {
+    width: 260px;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 14px;
+    border-color: #b1b1b12b;
+    margin-right: 16px;
+}
+
+.search-page button {
+    height: 36px;
+    width: 140px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(37, 119, 121);
+    border-style: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.search-page .error {
+    color: red;
+    font-weight: 500;
+    padding-top: 12px;
+    display: inline-block;
+}
+
+.search-page .red {
+    border-color: red;
+}
+
+.search-page button:active {
+    background-color: rgb(22, 98, 99);
+    box-shadow: 0 0 4px #3636364f;
+}
+
+.search-page button:active, .search-page button:focus, .search-page select:active, .search-page select:focus, .search-page input:active, .search-page input:focus { 
+    outline: none; 
+}
+
+.search-page input:active, .search-page input:focus { 
+    border-color:#36363689;
+}
+
+@media screen and (max-width: 992px) {
+    .search-page {
+        height: 100%;
+        margin-top: 100px;
+        text-align: center;
+    }
+
+    .content {
+        width: 90%; 
+        margin: auto;
+    }
+
+    .search {
+        text-align: center;
+        margin: auto;
+    }
+
+    h1 {
+        width: 80%;
+        text-align: center;
+        margin: 24px auto;
+    }
+
+    .search-page input {
+        width: calc(100% - 26px);
+        height: 48px;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+
+    .search-page select {
+        width: 100%;
+        height: 48px;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+
+    .search-page button {
+        width: 50%;
+        height: 48px;
+        margin: 16px 0;
+        font-size: 16px;
+    }
+
+    .error {
+        font-size: 16px;
+    }
+
+}
